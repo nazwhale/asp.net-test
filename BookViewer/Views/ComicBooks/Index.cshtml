@@ -1,14 +1,5 @@
 ﻿@{
     Layout = null;
-    var title = "Welcome to the bookatorium";
-    var subTitle = "Perveyors of peculiar books";
-    var text = "Here you can find all sorts of books. Big ones, small ones, some as big as your head. I don't even know how many books live here, it'd take me years to go through them all and frankly I just don't have the time.";
-    var authors = new string[]
-    {
-        "Italo Calvino",
-        "Luigi Seraphini",
-        "Georges Perec"
-    };
 }
 
 <!DOCTYPE html>
@@ -18,17 +9,17 @@
 </head>
 <body>
     <div>
-		<h1>@title</h1>
-        <h2>@subTitle</h2>
-        <p>@text</p>
+		<h1>@ViewBag.Title</h1>
+        <h2>@ViewBag.SubTitle</h2>
+        <p>@ViewBag.Text</p>
     </div>
 
-	@if (authors.Length > 0)
+	@if (ViewBag.Authors.Length > 0)
 	{
 		<h5>Authors: </h5>
 	    <div>
 	        <ul>
-				@foreach (var author in authors)
+				@foreach (var author in ViewBag.Authors)
 				{
 	                <li>@author</li>
 				}
