@@ -1,8 +1,14 @@
 ﻿@{
     Layout = null;
     var title = "Welcome to the bookatorium";
-    var subTitle = "Perveyors of fine literature";
+    var subTitle = "Perveyors of peculiar books";
     var text = "Here you can find all sorts of books. Big ones, small ones, some as big as your head. I don't even know how many books live here, it'd take me years to go through them all and frankly I just don't have the time.";
+    var authors = new string[]
+    {
+        "Italo Calvino",
+        "Luigi Seraphini",
+        "Georges Perec"
+    };
 }
 
 <!DOCTYPE html>
@@ -15,6 +21,15 @@
 		<h1>@title</h1>
         <h2>@subTitle</h2>
         <p>@text</p>
+    </div>
+
+    <div>
+        <ul>
+			@foreach (var author in authors)
+			{
+                <li>@author</li>
+			}
+        </ul>
 	</div>
 </body>
 </html>
