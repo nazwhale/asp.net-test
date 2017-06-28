@@ -1,31 +1,24 @@
 ﻿@{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Index</title>
-</head>
-<body>
-    <div>
-		<h1>@ViewBag.Title</h1>
-        <h2>@ViewBag.SubTitle</h2>
-        <p>@ViewBag.Text</p>
-    </div>
+<div>
+	<h1>@ViewBag.Title</h1>
+    <h2>@ViewBag.SubTitle</h2>
+    <p>@ViewBag.Text</p>
+</div>
 
-	@if (ViewBag.Authors.Length > 0)
-	{
-		<h5>Authors: </h5>
-	    <div>
-	        <ul>
-				@foreach (var author in ViewBag.Authors)
-				{
-	                <li>@author</li>
-				}
-	        </ul>
-		</div>
-	}
-</body>
-</html>
+@if (ViewBag.Authors.Length > 0)
+{
+	<h5>Authors: </h5>
+    <div>
+        <ul>
+			@foreach (var author in ViewBag.Authors)
+			{
+                <li>@author</li>
+			}
+        </ul>
+	</div>
+}
+
 
